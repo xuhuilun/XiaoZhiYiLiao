@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${DEEP_SEEK_API_KEY}
+      model-name: deepseek-chat
+      log-requests: true
+      log-responses: true
+      base-url: http://api.deepseek.com
+
+logging:
+  level:
+    root: info
+
