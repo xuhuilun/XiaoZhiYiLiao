@@ -25,22 +25,16 @@ class XiaozhiApplicationTests {
 
     @Autowired
     private SeparateChatAssistant separateChatAssistant;
+    @Autowired
+    private MemoryChatAssistant memoryChatAssistant;
+
     @Test
     public void testChatMemory5() {
-        String answer1 = separateChatAssistant.chat(1,"我是环环");
+        String answer1 = separateChatAssistant.chat2(1, "我是环环");
         System.out.println(answer1);
-        String answer2 = separateChatAssistant.chat(1,"我是谁");
-        System.out.println(answer2);
-        String answer3 = separateChatAssistant.chat(2,"我是谁");
-        System.out.println(answer3);
+
     }
-    @Test
-    void testMemory(){
-        String answer1 = assistant.chat("I am Jack");
-        System.out.println(answer1);
-        String answer2 = assistant.chat("who i am");
-        System.out.println(answer2);
-    }
+
 
 
 
