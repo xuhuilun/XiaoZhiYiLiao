@@ -1,5 +1,6 @@
 package com.xuhui.xiaozhi.config;
 
+import com.xuhui.xiaozhi.constant.EnvironmentConst;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,7 @@ public class AppConfig {
     @Bean
     public QwenChatModel qwenChatModel() {
         return QwenChatModel.builder()
-                .apiKey(System.getenv("DASH_SCOPE_API_KEY"))
+                .apiKey(System.getenv(EnvironmentConst.QwenAPI))
                 .modelName("qwen-max")
                 .build();
     }

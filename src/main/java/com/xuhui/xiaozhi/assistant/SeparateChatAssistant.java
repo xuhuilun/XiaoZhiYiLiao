@@ -11,14 +11,10 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
 @AiService(
         wiringMode = AiServiceWiringMode.EXPLICIT,
         chatModel = "qwenChatModel",
-        chatMemory = "chatMemory",
+//        tools = "calculatorTools",
         chatMemoryProvider = "chatMemoryProvider"
 )
 public interface SeparateChatAssistant {
-    //    @SystemMessage("你是我的好朋友，请用河南话回答问题,今天是{{current_date}}")
-
-    //    @SystemMessage(fromResource = "date.txt")
-
 
     String chat(@MemoryId int memoryId, @UserMessage String userMessage);
 
